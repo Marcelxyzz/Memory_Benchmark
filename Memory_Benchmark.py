@@ -327,8 +327,8 @@ def update_highscore_simon(username, new_score):
 def simon_says():
     if "sequence" not in st.session_state:
         st.session_state.sequence = []
-    if "user_input" not in st.session_state:
-        st.session_state.user_input = []
+    if "user_input2" not in st.session_state:
+        st.session_state.user_input2 = []
     if "level" not in st.session_state:
         st.session_state.level = 0
     if "game_over2" not in st.session_state:
