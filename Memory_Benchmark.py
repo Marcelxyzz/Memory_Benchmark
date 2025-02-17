@@ -49,11 +49,11 @@ def homescreen():
 def update_highscore_number(username, new_score):
     client = connect_to_mongo()
     collection = connect_to_collection("Streamlit", "user_registration_data")
-    user_data = collection.find_one({"user_name": username}, {"_id": 0, "🔢 Highscore Number Memory": 1})
-    old_highscore = user_data.get("🔢 Highscore Number Memory", 0)
+    user_data = collection.find_one({"user_name": username}, {"_id": 0, "🔢 Number Memory": 1})
+    old_highscore = user_data.get("🔢 Number Memory", 0)
 
     if new_score > old_highscore:
-        collection.update_one({"user_name": username}, {"$set": {"🔢 Highscore Number Memory": new_score}})
+        collection.update_one({"user_name": username}, {"$set": {"🔢 Number Memory": new_score}})
         return True
     return False
 
@@ -178,11 +178,11 @@ def update_highscore_word(username, new_score):
     client = connect_to_mongo()
     collection = connect_to_collection("Streamlit", "user_registration_data")
 
-    user_data = collection.find_one({"user_name": username}, {"_id": 0, "🔢 Highscore Word Memory": 1})
-    old_highscore = user_data.get("🔢 Highscore Word Memory", 0)
+    user_data = collection.find_one({"user_name": username}, {"_id": 0, "🔢 Word Memory": 1})
+    old_highscore = user_data.get("🔢 Word Memory", 0)
 
     if new_score > old_highscore:
-        collection.update_one({"user_name": username}, {"$set": {"🔢 Highscore Word Memory": new_score}})
+        collection.update_one({"user_name": username}, {"$set": {"🔢 Word Memory": new_score}})
         return True
     return False
 
@@ -315,11 +315,11 @@ def update_highscore_simon(username, new_score):
     client = connect_to_mongo()
     collection = connect_to_collection("Streamlit", "user_registration_data")
 
-    user_data = collection.find_one({"user_name": username}, {"_id": 0, "🔄 Highscore Simon Says": 1})
-    old_highscore = user_data.get("🔄 Highscore Simon Says", 0)
+    user_data = collection.find_one({"user_name": username}, {"_id": 0, "🔄 Simon Says": 1})
+    old_highscore = user_data.get("🔄 Simon Says", 0)
 
     if new_score > old_highscore:
-        collection.update_one({"user_name": username}, {"$set": {"🔄 Highscore Simon Says": new_score}})
+        collection.update_one({"user_name": username}, {"$set": {"🔄 Simon Says": new_score}})
         return True
     return False
 
