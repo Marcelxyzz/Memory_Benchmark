@@ -344,7 +344,7 @@ def simon_says():
 
     def start_game():
         st.session_state.sequence = []
-        st.session_state.user_input = []
+        st.session_state.user_input2 = []
         st.session_state.level = 1
         st.session_state.game_over2 = False
         st.session_state.game_started2 = True
@@ -366,16 +366,16 @@ def simon_says():
 
     # Check if user input is correct
     def check_input(choice):
-        st.session_state.user_input.append(choice)
+        st.session_state.user_input2.append(choice)
 
-        index = len(st.session_state.user_input) - 1
-        if st.session_state.user_input[index] != st.session_state.sequence[index]:
+        index = len(st.session_state.user_input2) - 1
+        if st.session_state.user_input2[index] != st.session_state.sequence[index]:
             st.session_state.game_over2 = True
         elif len(st.session_state.user_input) == len(st.session_state.sequence):
             st.success("✅ Correct! Next level...")
             time.sleep(1)
             st.session_state.level += 1
-            st.session_state.user_input = []
+            st.session_state.user_input2 = []
             add_new_step()
             show_pattern()
             st.rerun()
