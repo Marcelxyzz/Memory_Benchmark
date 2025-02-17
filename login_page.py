@@ -28,8 +28,8 @@ def login_page():
     with placeholder.form("LOGIN"):
         st.write("Hello! Please enter your log info.")
         st.write("If this is your first time on my app then please go to the Registration Page.")
-        st.session_state.username = st.text_input("username")
-        password = st.text_input("password", type="password")
+        st.session_state.username = st.text_input("Username")
+        password = st.text_input("Password", type="password")
         login_button = st.form_submit_button("Login")
 
     if login_button:
