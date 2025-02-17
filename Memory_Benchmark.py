@@ -8,19 +8,6 @@ from registration_page import connect_to_mongo
 from helpers import connect_to_collection
 
 
-def reset_session():
-    st.session_state.current_page = "Home"
-    st.session_state.number_memory_score = 0
-    st.session_state.number_memory_level = 1
-    st.session_state.number_memory_timer = 3
-    st.session_state.word_memory_score = 0
-    st.session_state.word_memory_lives = 3
-    st.session_state.word_memory_seen = []
-    st.session_state.word_memory_word_list = []
-
-
-if "current_page" not in st.session_state:
-    reset_session()
 
 
 def homescreen():
