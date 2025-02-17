@@ -476,7 +476,7 @@ def stats():
             st.header("🔝 Highscores")
             st.json(user_data)  # Shoes MongoDB document of the user
         else:
-            st.error("Error: Your Account couldn't be found.")
+            st.error("Error: Your Account couldn't be found or you don't have a highscore yet.")
 
 
 if "options" not in st.session_state:
