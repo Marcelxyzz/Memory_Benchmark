@@ -488,7 +488,7 @@ if st.session_state.registered and "Register" in st.session_state.options:
     st.session_state.options.remove("Register")
 
 st.sidebar.image("https://cdn-icons-png.flaticon.com/512/5431/5431045.png",
-                 use_column_width=True)
+                 use_container_width=True)
 st.sidebar.title("Navigation")
 st.sidebar.markdown("---")
 
