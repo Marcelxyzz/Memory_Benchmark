@@ -473,6 +473,7 @@ def stats():
 
         if user_data:
             st.success(f"🎉 Welcome, {st.session_state.username}!")
+            st.header("🔝 Highscores")
             st.json(user_data)  # Shoes MongoDB document of the user
         else:
             st.error("Error: Your Account couldn't be found.")
