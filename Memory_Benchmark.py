@@ -371,7 +371,7 @@ def simon_says():
         index = len(st.session_state.user_input2) - 1
         if st.session_state.user_input2[index] != st.session_state.sequence[index]:
             st.session_state.game_over2 = True
-        elif len(st.session_state.user_input) == len(st.session_state.sequence):
+        elif len(st.session_state.user_input2) == len(st.session_state.sequence):
             st.success("✅ Correct! Next level...")
             time.sleep(1)
             st.session_state.level += 1
